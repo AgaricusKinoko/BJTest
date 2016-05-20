@@ -233,16 +233,7 @@ Scene_Kinoko.prototype.drawHelp = function() {
     this._helpWindow.contents.clear();
     if(this._status == -1){
         if(this._help < 200){
-httpObj = new XMLHttpRequest();
- httpObj.open("get", "./test.json", true);
- httpObj.onload = function(){
- var myData = JSON.parse(this.responseText);
- var txt = "";
-this._helpWindow.drawText(myData[0].item.test,0,0);
- document.getElementById("result").innerHTML = txt;
- }
- httpObj.send(null);
-            //this._helpWindow.drawText("上下キーでベットする"+coinName+"を"+minRate+"枚単位で変更します。",0,0);
+            this._helpWindow.drawText("上下キーでベットする"+coinName+"を"+minRate+"枚単位で変更します。",0,0);
         } else if(this._help < 400){
             this._helpWindow.drawText("ページキーでベットする"+coinName+"を"+maxRate+"枚単位で変更します。",0,0);
         } else {
